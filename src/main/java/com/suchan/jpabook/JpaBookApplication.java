@@ -8,6 +8,6 @@ public class JpaBookApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(JpaBookApplication.class, args);
-    }
 
+    }
 }
