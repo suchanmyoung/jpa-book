@@ -1,6 +1,7 @@
 package com.suchan.jpabook.respository;
 
 import com.suchan.jpabook.domain.Member;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -8,6 +9,7 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
+@RequiredArgsConstructor
 public class MemberRepository {
 
     /**
@@ -15,8 +17,7 @@ public class MemberRepository {
      * 싱글톤이라 동시성 문제가 될 수 있지만, 스프링은 여기에 실제 EntityManager 를 주입하는 것이 아니라, 사실은 실제 EntityManager 를 연결해주는 가짜를 만든다.
      * 그리고 가짜를 호출하면 현재 DB 트랜잭션과 관련된 실제를 호출한다.
      */
-    @PersistenceContext
-    private EntityManager em; //\
+    private final EntityManager em; // 이렇게 사용하는 건 스프링 부트만 됨.
 
     /**
      * 만약 EntityManagerFactory 를 관리하고 싶으면 @PersistenceUnit 을 사용한다
