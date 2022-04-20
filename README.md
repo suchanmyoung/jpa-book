@@ -23,9 +23,11 @@
   * repository
   * service
   * web
-
-###
 * 개발 순서
   * 서비스, 리포지토리(핵심 비즈니스 계층)을 먼저 개발
   * 테스트 케이스 검증
   * 웹 계층 적용
+
+### 테스트와 개발 환경의 분리
+* test 패키지와 main 패키지의 application.yml 을 별도로 구분해서 사용
+* In memory DB를 사용하는 경우가 많음

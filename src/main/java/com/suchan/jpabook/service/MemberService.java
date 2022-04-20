@@ -3,6 +3,7 @@ package com.suchan.jpabook.service;
 import com.suchan.jpabook.domain.Member;
 import com.suchan.jpabook.respository.MemberRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
